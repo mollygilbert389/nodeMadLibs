@@ -5,7 +5,7 @@ function MadLib(nouns,numbers,adjectives,verbs) {
     this.numbers = numbers;
     this.adjectives = adjectives;
     this.verbs = verbs;
-    this.story = "Once upon a time the were [number] very best [noun] that were going to go on a [adjective] adventure. The adventure would start with the group [verb] in a bar. This is where they would meet the [noun] for the first time."
+    this.story = "Once upon a time the were [number] very best [noun] that were going on a [adjective] adventure. \n The adventure started as the group [verb] into a bar. \n This is where they would meet the [noun] for the first time."
 }
 
 var nouns = []
@@ -48,7 +48,7 @@ var getWords = function(loop){
     if(loop >= 4 && loop < 5) {
         inquirer.prompt({
             name: "verb",
-            message: "Enter a verb: "
+            message: "Enter a verb (past tense): "
         }).then(function(answers){
             verbs.push(answers.verb)
             var madLib = new MadLib(nouns, numbers, adjectives,verbs);
